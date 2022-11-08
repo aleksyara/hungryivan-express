@@ -6,7 +6,8 @@ module.exports = {
 };
 
 function show(req, res) {
-  res.render("menu/index", {
+// res.render("menu/show", {
+   res.render("index", {
     taco: Menu.getAll(),
     // // Would like to display the number of the todo within the list
     // todoNum:

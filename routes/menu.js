@@ -14,6 +14,6 @@ var menuesCtrl = require('../controllers/menues');
 //     menuItems: menuDb.getAll(),
 //   });
 // });
-router.get('/menu', menuesCtrl.show);
+router.get('/', menuesCtrl.show);
 
 module.exports = router;
