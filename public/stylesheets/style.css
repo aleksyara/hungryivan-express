@@ -1,8 +1,231 @@
 body {
-  padding: 50px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
 }
+#title {
+  background-color: #ff4c68;
+  /* font-family: 'Ubuntu', sans-serif; */
+  color: #fff;
+}
+
+body {
+  font-family: "Montserrat";
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 100;
+}
+
+.container-fluid {
+  padding: 3% 15%;
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h3 {  
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  color: #8f8f8f;
+  font-weight: 400;
+}
+
+/* Headings */
+.big-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+/* Navigation Bar */
+
+.navbar {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  padding-bottom: 4.5rem;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(131, 31, 31);
+}
+
+.nav-item {
+  padding: 0 18px;
+  font-size: 1.2rem;
+}
+
+#navbarTogglerDemo01 {
+  font-size: 1rem;
+  color: #000;
+}
+
+/* Buttons */
+
+.nav-btn {
+  margin: 5% 3% 5% 0%;
+}
+
+/* Title section */
+@media (max-width: 900px){
+    #title{
+      text-align: center;
+  }
+}
+
+/* Title Image  */
+.rotated {
+  transform: rotate(20deg); /* Equal to rotateZ(45deg) */
+  /* background-color: yellow; */
+}
+.title-image {
+  width: 50%;
+  margin: 10% 3% 5% 0%;
+  /* position: absolute;
+  right: 30%; */
+}
+/* Features */
+#features {
+  padding: 18px 18px;
+}
+.features-box {
+  text-align: center;
+  /* min-width: 200px;
+  width: auto;*/
+  /* padding: 5%; */
+}
+
+
+/*  Testimonials  */
+
+
+#testimonials{
+  text-align: center;
+  background-color: #ff4c68;
+  color: #fff;  
+  padding: 5%;
+}
+
+.carousel-item {
+  padding: 7% 18%;
+}
+
+.testimonials-image {
+   width: 40%;  
+   margin: 3%; 
+   border-radius: 10%;
+}
+
+#press{
+  background-color: #ff4c68;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+.press-image {
+   margin: 0 3% 3% 3%;
+   border-radius: 10%;
+}
+.press-image-2 {
+  width: 13%;  
+  margin: 0 3% 3% 3%;
+  border-radius: 10%;
+  text-align: center;
+}
+
+/* Icons */
+.fas-icons {
+  padding: 18px 18px;
+  color: #ef8172;
+  /* margin-bottom: 1rem; */
+}
+
+.fas-icons:hover {
+  color: #ff4c68;
+}
+
+
+/* Pricing */
+#pricing {
+  text-align: center;
+  padding: 5%;
+}
+.pricing-image {
+  width: 70%;  
+  margin: 3% 10% 3% 15%;
+  border-radius: 100%;
+}
+
+.pricing-lambo {
+  width: 45%;  
+  margin: 3% 10% 3% 27%;
+  border-radius: 100%;
+}
+
+
+/* CTA */
+#cta {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-image {
+  width: 40%;  
+  border-radius: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.card-title {
+  color: rgb(131, 31, 31);
+  font-family: "Ubuntu";
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+/* Footer */
+
+#footer {
+  text-align: center;
+  padding: 7% 15%;
+}
+.social-icon {
+  margin: 20px 10px;
+  font-size: 1.5rem;
+  color: #8f8f8f;
+}
+
+/* .ms-1 {
+  margin-top: 0 !important;
+} */
+
+
+
+
+
+/* @media screen and (max-width: 400px) {
+  #features {
+    width: 100%;
+    clear: both;
+    margin-left: 0;
+    margin-top: 200px;
+    padding: 0 18px;
+  }
+} */
