@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+<h1>Let's add new Menu Iteem</h1>
+<form action="/menu" method="POST">
+  <section id="menu">
+    <label
+      >Choose Menu Type
+      <select name="mpaaRating">
+        <option value="MC">Manty</option>
+        <option value="L">Laghman</option>
+        <option value="P">Plov</option>
+        <option value="T">Tvorog</option>
+        <option value="MF">Manty Fusion</option>
+        <option value="IP">Impossible Peppers</option>
+      </select> </label
+    ><br />
+    <label
+      >Fillings (separate ingredients with commas):
+      <input type="text" name="fillings" /> </label
+    ><br />
+    <label
+      >Is it Frozen?: <input type="checkbox" name="frozen" unchecked /> </label
+    ><br />
+    <label>Package Size: <input type="text" name="pkg" /> </label><br />
+    <label>Price: <input type="text" name="price" /> </label><br />
+    <input type="submit" value="Add Menu Item" />
+  </section>
+</form>
+<%- include('../partials/footer') %>

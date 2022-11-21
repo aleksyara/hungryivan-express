@@ -3,6 +3,7 @@ const Menu = require("../models/menu-db");
 
 module.exports = {
   show,
+  new: newMenuItem
 };
 
 function show(req, res) {
@@ -13,4 +14,8 @@ function show(req, res) {
     //   Menu.getAll().findIndex((menu) => menu.id === parseInt(req.params.id)) +
     //   1,
   });
+}
+
+function newMenuItem(req, res) {
+  res.render("menu/new", { title: "Add Menu Item" });
 }

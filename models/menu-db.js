@@ -1,68 +1,73 @@
-const menuItems = [
-  {
-    menuItem: "manty",
-    type: "Classis",
-    meat: "beef",
-    frozen: true,
-    price: 25,
-    size: 2,
-  },
-  {
-    menuItem: "manty",
-    type: "Fusion",
-    meat: "beef",
-    frozen: false,
-    price: 40,
-    size: 2,
-  },
-  {
-    menuItem: "manty",
-    type: "Classis",
-    meat: "lamp",
-    frozen: true,
-    price: 25,
-    size: 2,
-  },
-  {
-    menuItem: "manty",
-    type: "Fusion",
-    meat: "lamb",
-    frozen: false,
-    price: 40,
-    size: 2,
-  },
-  {
-    menuItem: "Laghman",
-    type: "hotmeal",
-    meat: "beef",
-    frozen: false,
-    price: 100,
-    size: 4,
-  },
-  {
-    menuItem: "Plov",
-    type: "hotmeal",
-    meat: "beef",
-    frozen: false,
-    price: 100,
-    size: 4,
-  },
-];
+const mongoose = require("mongoose");
+// optional shortcut to the mongoose.Schema class
+const Schema = mongoose.Schema;
 
-//   module.exports = {
-//     getAll: function() {
-//       return menuItems;
-//     }
-//   };
-
-// const todos = [
-//     {todo: 'Feed Dogs', done: true},
-//     {todo: 'Learn Express', done: false},
-//     {todo: 'Buy Milk', done: false}
-//   ];
-
-module.exports = {
-  getAll: function () {
-    return menuItems;
+const menuSchema = new Schema({
+  category: {
+    type: String,
+    enum: ["Manty", "Laghman", "Plov", "Tvorog", "Manty Fusion"],
   },
-};
+  stuffing: [String],
+  price: Number,
+  frozen: Boolean,
+  pkgSize: Number,
+});
+
+// const menuItems = [
+//   {
+//     menuItem: "manty",
+//     type: "Classic",
+//     meat: "beef",
+//     frozen: true,
+//     price: 25,
+//     size: 2,
+//   },
+//   {
+//     menuItem: "manty",
+//     type: "Fusion",
+//     meat: "beef",
+//     frozen: false,
+//     price: 40,
+//     size: 2,
+//   },
+//   {
+//     menuItem: "manty",
+//     type: "Classic",
+//     meat: "lamp",
+//     frozen: true,
+//     price: 25,
+//     size: 2,
+//   },
+//   {
+//     menuItem: "manty",
+//     type: "Fusion",
+//     meat: "lamb",
+//     frozen: false,
+//     price: 40,
+//     size: 2,
+//   },
+//   {
+//     menuItem: "Laghman",
+//     type: "hotmeal",
+//     meat: "beef",
+//     frozen: false,
+//     price: 100,
+//     size: 4,
+//   },
+//   {
+//     menuItem: "Plov",
+//     type: "hotmeal",
+//     meat: "beef",
+//     frozen: false,
+//     price: 100,
+//     size: 4,
+//   },
+// ];
+// module.exports = {
+//   getAll: function () {
+//     return menuItems;
+//   },
+// };
+
+// Compile the schema into a model and export it
+module.exports = mongoose.model("Menu", menuSchema);
