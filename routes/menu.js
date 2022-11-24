@@ -16,5 +16,6 @@ var menuesCtrl = require('../controllers/menues');
 // });
 router.get('/', menuesCtrl.show);
 router.get('/new', menuesCtrl.new);
+router.post('/', menuesCtrl.create);
 
 module.exports = router;
