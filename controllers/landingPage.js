@@ -5,8 +5,14 @@ module.exports = {
   show,
 };
 
+// function show(req, res) {
+//   res.render("index", {
+//     taco: Menu.getAll(),
+//   });
+// }
+
 function show(req, res) {
-  res.render("index", {
-    taco: Menu.getAll(),
+  Menu.find({}, function (err, menue) {
+    res.render("index", { title: "All Menu", menue });
   });
 }

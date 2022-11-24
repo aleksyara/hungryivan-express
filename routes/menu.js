@@ -14,7 +14,7 @@ var menuesCtrl = require('../controllers/menues');
 //     menuItems: menuDb.getAll(),
 //   });
 // });
-router.get('/', menuesCtrl.show);
+router.get('/', menuesCtrl.index);
 router.get('/new', menuesCtrl.new);
 router.post('/', menuesCtrl.create);
 

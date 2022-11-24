@@ -2,20 +2,33 @@
 const Menu = require("../models/menu-db");
 
 module.exports = {
-  show,
+  index,
+  //show,
   new: newMenuItem,
   create,
 };
 
-function show(req, res) {
-  res.render("menu/index", {
-    taco: Menu.getAll(),
-    // // Would like to display the number of the todo within the list
-    // todoNum:
-    //   Menu.getAll().findIndex((menu) => menu.id === parseInt(req.params.id)) +
-    //   1,
+function index(req, res) {
+  Menu.find({}, function(err, menue){
+    res.render('menu/index', {title: 'All Menu', menue});
   });
 }
+    
+
+// function show(req, res) {
+//   res.render("menu/index", {
+//     taco: Menu.getAll(),
+//     // // Would like to display the number of the todo within the list
+//     // todoNum:
+//     //   Menu.getAll().findIndex((menu) => menu.id === parseInt(req.params.id)) +
+//     //   1,
+//   });
+// }
+
+
+
+
+
 
 //Add new Menu Item
 //Step 1 Display Adding Form
