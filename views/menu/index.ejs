@@ -10,15 +10,18 @@
             <tr>
               <th>Menu Item</th>
               <th>Price</th>
-              <th></th>
+              <th>Package Size</th>
+              <th>Frozen?</th>
             </tr>
           </thead>
           <tbody>
-            <% menue.forEach(function(m) { %>
+            <% menueItems.forEach(function(m) { %>
             <tr>
-              <td><%= m %></td>
+              <td><%= m.category %></td>
               <td><%= m.price %></td>
-              <td><a href="">DETAILS</a></td>
+              <!-- <td><a href="">DETAILS</a></td> -->
+              <td><%= m.pkgSize %></td>
+              <td><%= m.frozen ? "Yes" : "No" %></td>
             </tr>
             <% }); %>
           </tbody>

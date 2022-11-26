@@ -1,15 +1,16 @@
-const mongoose = require("mongoose");
-// optional shortcut to the mongoose.Schema class
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const menuSchema = new Schema({
   category: {
     type: String,
-    enum: ["Manty", "Laghman", "Plov", "Tvorog", "Manty Fusion"],
+    required: true
+    //enum: ["Manty", "Laghman", "Plov", "Tvorog", "Manty Fusion"],
   },
   stuffing: [String],
+  frozen: { type: Boolean, default: false },
   price: Number,
-  frozen: Boolean,
+  //frozen: Boolean,
   pkgSize: Number,
 });
 
@@ -70,4 +71,4 @@ const menuSchema = new Schema({
 // };
 
 // Compile the schema into a model and export it
-module.exports = mongoose.model("Menu", menuSchema);
+module.exports = mongoose.model('Menu', menuSchema);
